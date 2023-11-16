@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color:rgb(243, 251, 206);
+}
+button { 
+       background-color: #6238b6; 
+       width: 100%;
+        color:white; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        border: 3px solid #e0dbdb; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid rgb(201, 198, 198); 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+      
+   
+ .container { 
+        padding: 25px; 
+        background-color: rgb(227, 246, 253);
+    } 
+</style> 
+</head>  
+<body>  
+    <center> <h1>Login Form </h1> </center> 
+    <form>
+        <div class="container"> 
+            <label><b>Email or phone no:</b> </label> 
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label><b>Password : </b></label> 
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+            No account?<a href="{%url 'myapp:signup' %}">Sign up</a>
+            <a href="#" style="float:right;"> Forgot password? </a> 
+        </div> 
+    </form>   
+</body>
+</html>

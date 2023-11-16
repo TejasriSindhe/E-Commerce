@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <b>{{d.title}}</b><br>
+        {{d.description}}<br>
+        <b>₹{{d.price}}</b><br>
+        <ul>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <img src="{{d.img.url}}" alt="">
+    </div>
+</div>
+<form action="{% url 'myapp:detail' d.id d.slug %}" method="post">
+    {% csrf_token %}
+    {{ f }}
+    <input style="background-color: gold;" type="submit" value="Add to cart">
+</form>
+{% endblock %}

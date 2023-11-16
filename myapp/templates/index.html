@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h1 style="color: cadetblue;"><marquee>LAVISH LOOK</marquee></h1></center><br><br>
+<div class="row">
+    {% for i in p %}
+    <div class="col-md-6">
+        <a href="{% url 'myapp:detail' i.id i.slug %}"><b>{{i.title}}</b></a><br>
+        <img src="{{i.img.url}}" alt="" width="100" height="100">
+        <br>
+        ₹{{i.price}}
+        <br><br>
+    </div>
+     {% endfor %}
+</div>
+
+{% endblock %}
